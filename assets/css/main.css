@@ -1,0 +1,316 @@
+/* 
+    Main CSS Stylesheet
+    Author     : Queen Gene
+*/
+
+.wrapper{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html {
+    /*height:100%;*/
+    /*background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);*/
+}
+
+nav {
+    max-width: 960px;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+nav ul {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    /*box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);*/
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 18px;
+    font-family: "Open Sans";
+    text-transform:uppercase;
+    /*color: rgba(0, 35, 122, 0.5);*/
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(0, 35, 122, 0.7);
+}
+
+h1{
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+h2{
+    font-family: "Open Sans";
+    padding: 80px;
+}
+
+/*-*/
+
+/*// slanted edge here*/
+.hero img {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+
+/*// demo code below*/
+.hero {
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    position: relative;
+    text-align: center;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+
+    img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    figcaption {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 0.5em;
+    }
+}
+
+.promo {
+    /*    clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);*/
+    /*background: url(https://unsplash.it/1600/900?image=830) no-repeat;*/
+    background-size: cover;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    /*margin: 50px 0;*/
+    overflow: hidden;
+    /*padding: 150px 20px;*/
+    position: relative;
+    text-align: center;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 0.5em;
+    }
+}
+
+/*Animated Night Sky*/
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, 
+.twinkling {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+.stars {
+    background:#0d2142 url('../img/star-map.png') repeat top center;
+    z-index:0;
+}
+
+.twinkling{
+    background: url('../img/twinkling.png') repeat top center;
+    z-index:1;
+    -moz-animation:move-twink-back 400s linear infinite;
+    -ms-animation:move-twink-back 400s linear infinite;
+    -o-animation:move-twink-back 600s linear infinite;
+    -webkit-animation:move-twink-back 400s linear infinite;
+    animation:move-twink-back 600s linear infinite;
+}
+
+.night-bg {
+    background: url('../img/night-bg-desktop.png') no-repeat bottom center fixed; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    z-index: -1;
+}
+
+#fttl {
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 14%);
+    clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 14%);
+    background: url('../img/quote-bg.png') no-repeat;
+    background-color: skyblue;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 50px 0;
+    overflow: hidden;
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+
+    h2 {
+        font-size: 32px;
+        text-align: left;
+        margin-left: 2%;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 0.5em;
+    }
+}
+
+#skelter {
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 14%);
+    clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 14%);
+    background: url('../img/skelter-bg.png') no-repeat;
+    background-color: skyblue;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 50px 0;
+    overflow: hidden;
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+}
+
+#skelter p,
+#fttl p,
+#untold-tales p,
+#clothdolls p{
+    color: #000;
+    background-color: #fff;
+    opacity: 0.7;
+    padding: 20px;
+}
+
+#untold-tales {
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 0);
+    background: url('../img/day-home-bg.png') no-repeat;
+    background-color: skyblue;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 50px 0;
+    overflow: hidden;
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+}
+
+/*Archer Animation*/
+
+.archer {
+    margin: 0 auto;
+    width: 64px;
+    height: 65px;
+    background-image: url('../img/archer.png');
+
+    -webkit-animation: archer 3s steps(13) infinite;
+    -moz-animation: archer 3s steps(13) infinite;
+    -ms-animation: archer 3s steps(13) infinite;
+    -o-animation: archer 3s steps(13) infinite;
+    animation: archer 3s steps(13) infinite;
+}
+
+@-webkit-keyframes archer {
+    from { background-position:    0px; }
+    to { background-position: -832px; }
+}
+
+@-moz-keyframes archer {
+    from { background-position:    0px; }
+    to { background-position: -832px; }
+}
+
+@-ms-keyframes archer {
+    from { background-position:    0px; }
+    to { background-position: -832px; }
+}
+
+@-o-keyframes archer {
+    from { background-position:    0px; }
+    to { background-position: -832px; }
+}
+
+#clothdolls {
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 14%);
+    clip-path: polygon(100% 0, 100% 90%, 0% 100%, 0 14%);
+    background: url('../img/clothdolls-bg.png') no-repeat;
+    background-color: skyblue;
+    /*background-size: contain;*/
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 50px 0;
+    overflow: hidden;
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+}
+
+.back-to-top{
+    padding: 10px 20px 10px 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+}
